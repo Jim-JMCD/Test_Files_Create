@@ -468,7 +468,7 @@ function Make_tree_printables(){
 #------------------------------------------------------------
 ##### MAIN ##################################################
 #
-if [ $1 == "-C" ] ; then
+if [[ $1 == "-C" ]] ; then
    while true ; do
      Calculator
      read -p " Run again [y/n]" again
@@ -476,7 +476,7 @@ if [ $1 == "-C" ] ; then
    done
 fi
 # Now creating data, not calculating
-if [ $# -eq 0 ] || [ $# -eq 2 ]; then
+if [[ $# -eq 0 ]] || [[ $# -eq 2 ]]; then
  echo "FAILED. For more info run: $(basename $0) -h" 
   exit 1
 fi
