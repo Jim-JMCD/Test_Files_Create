@@ -98,7 +98,10 @@ Validate file contents
 Number of characters in printable character pool: 
      sed 's/\(.\)/\1\n/g' <file name> | sort | uniq -c | wc -l 
 Distribtion of printable characters in file:
-     sed 's/\(.\)/\1\n/g' <file name> | sort | uniq -c 
+     sed 's/\(.\)/\1\n/g' <file name> | sort | uniq -c
+Read raw file contents
+    od -N <bytes> -Ax -t x1z <file name>
+    <bytes> is the bytes quantity from beginning of file. Non-printable chars will appear as "dots"
 
 EXAMPLES 
 $(basename $0) -P 28 -d 3 -w 5 -f 15M -n 50
