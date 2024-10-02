@@ -8,7 +8,7 @@ cat << msg_end
  Includes a calculator for creating data in directory trees. [Option -C]
 
  Minimum file number = 1, Minimum file size = 2 bytes.   
- File contents can be identical or individully filled with random content.
+ File contents can be identical or individually filled with random content.
  File contents can either be printable or binary (from /dev/urandom). 
  Files sizes can be identical or randomly sized within a given range.
  This script can be run interactively or unaccompanied in batch/quiet mode. 
@@ -110,7 +110,7 @@ Do you want to proceed? (y/n)
 $(basename $0) -D 5 -d 1 -f 600K -n 1000 -r -o /home/ted/test
   SINGLE DIRECTORY conting 1000 files
   Output: /home/ted/test/tfc_240930-1802-53
-  Random data created individualy for all files
+  Random data created individually for all files
   Files created are all 600K
   Storage used...... 585.94M (max potential)
   File Contents..... Random selection from the 5 digit set: 01234
