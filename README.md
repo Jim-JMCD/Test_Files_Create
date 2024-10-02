@@ -102,6 +102,9 @@ ___Validate contents: all Files:___
 ___Validate printable character distribution:___
    
     od -a <file name>  | cut -b 9- | tr " " \\n | egrep -v "^$" | sort | uniq -c
+    OR
+    sed 's/\(.\)/\1\n/g' <file name> | sort | uniq -c
+    
     
 _Output_
 * Column 1 : Character count
@@ -110,6 +113,8 @@ _Output_
 ___Validate printable character pool count:___
 
     od -a <file name>  | cut -b 9- | tr " " \\n | egrep -v "^$" | sort | uniq -c | wc -l
+    OR
+    sed 's/\(.\)/\1\n/g' <file name> | sort | uniq -c | wc -l 
 _________________________________________________________________________________________________________
 EXAMPLES 
 
