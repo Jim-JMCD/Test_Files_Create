@@ -1,6 +1,6 @@
 # TFileCreate (Test Files Create)
 
- A test file generator that fills files with random data in a single directory or a directory tree. 
+ A bash script test file generator that fills files with random data in a single directory or a directory tree. 
  
  * Includes a calculator for creating data in directory trees. [Option -C]
  * Will create a single file to directory tress of files, minimum file size = 2 bytes   
