@@ -91,7 +91,26 @@ Data creation bails out before any data creation if:
 If the 'seq' command is not avaiable. The character pool will not be displayed in the inital summary. The seq command is not required for file creation.
 
 Binary data is generated from /dev/urandom. This data will not compress that well. Binary data that is stored/transmitted may render data deduplication and compression ineffective.  
+___Validate contents: all Files:___
 
+    od -N <bytes> -Ax -t x1z <file name>
+     
+* Where \<bytes\> is the number to check from beginning of file.
+* Non-printable characters will appear as "dots"
+* For sparse files omit \<bytes\> as it not required.
+
+___Validate printable character distribution:___
+   
+    od -a <file name>  | cut -b 9- | tr " " \\n | egrep -v "^$" | sort | uniq -c
+    
+_Output_
+* Column 1 : Character count
+* Column 2 : Character being counted. This column should only contain a single charcter, if not then file contents is binary data.
+
+___Validate printable character pool count:___
+
+    od -a <file name>  | cut -b 9- | tr " " \\n | egrep -v "^$" | sort | uniq -c | wc -l
+_________________________________________________________________________________________________________
 EXAMPLES 
 
 __TFileCreate -P 28 -d 3 -w 5 -f 15M -n 50__
