@@ -109,9 +109,9 @@ __TFileCreate -P 28 -d 3 -w 5 -f 15M -n 50__
 
 __TFileCreate -D 5 -d 1 -f 600K -n 1000 -r -o /home/ted/test__
 
-    SINGLE DIRECTORY conting 1000 files
+    SINGLE DIRECTORY containing 1000 files
     Output: /home/ted/test/tfc_240930-1802-53
-    Random data created individualy for all files
+    Random data created individually for all files
     Files created are all 600K
     Storage used...... 585.94M (max potential)
     File Contents..... Random selection from the 5 digit set: 01234
