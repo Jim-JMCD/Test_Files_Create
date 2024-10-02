@@ -23,7 +23,7 @@ _______________________________________________________________________
 __DEFAULTS__
  * File contents are binary. Use -P or -D for creating compressable printable data  
  * If all files same size then contents will also be identical.  Use -r option to randomise file contents.
- * A time stamped output directory is created in users current directory. 
+ * A time stamped output directory is created in users current directory. Alternatively use another directory with the -o option
  * Interactive mode, requires confirmation to proceed after providing user with a summary. See examples.
 
 __OPTIONS: Manditory__
