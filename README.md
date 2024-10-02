@@ -88,7 +88,7 @@ Data creation bails out before any data creation if:
 * If the 'shuf' command is not available 
 * if the -c option not avaiable for the 'head' command.
 
-If the 'seq' command is not avaiable. The character pool will not be displayed in the inital summary. 
+If the 'seq' command is not avaiable. The character pool will not be displayed in the inital summary. The seq command is not required for file creation.
 
 Binary data is generated from /dev/urandom. This data will not compress that well. Binary data that is stored/transmitted may render data deduplication and compression ineffective.  
 
