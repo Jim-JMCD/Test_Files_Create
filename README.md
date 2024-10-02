@@ -1,5 +1,6 @@
-# Test_Files_Create ( *TFileCreate* ) - *Still Under devleopment Work in progress* 
- A test file generator that generates random data in a single directory or a directory tree. 
+# TFileCreate (Test Files Create)
+
+ A test file generator that fills files with random data in a single directory or a directory tree. 
  
  * Includes a calculator for creating data in directory trees. [Option -C]
  * Will create a single file to directory tress of files, minimum file size = 2 bytes   
@@ -9,15 +10,15 @@
  * Run either interactively or unaccompanied in batch mode. 
 _______________________________________________________________________
 
-## CALCULATOR MODE  (interactive, tree only) 
+## CALCULATOR mode  (interactive, tree only) 
 
-__TFileCreate-C__ 
+__TFileCreate -C__ 
  
  *User Inputs*: Tree depth, width, number files per directory and file size
  
  *Output*: Smmary, tables of data trees of current and smaller trees. Tables contain data size and file numbers for each tree
 _______________________________________________________________________
-## TEST DATA CREATION MODE  
+## TEST DATA CREATION mode  
 
 __DEFAULTS__
  * File contents are binary. Use -P or -D for creating compressable printable data  
@@ -27,23 +28,10 @@ __DEFAULTS__
 
 __OPTIONS: Manditory__
  * -d Depth of tree, minimum -d 1 (a single directory)
- * -f or -l File size, minimum 2 bytes  
+ * -f or -l File size, minimum 2 bytes
+ * -n Number files per directory, minimum 1 file  
 
-__OPTIONS: Optional__
-* __-P _n___   Where _n_ is a nuber in the range 1 to 95. Selects the pool of printable characters from the ASCI set. 
-  * _n_ = 1 files only contain the uppercase 'A' 
-  * _n_ = 2 to 26 files only contain lowercase Latin alphabet characters
-  * _n_ >26 files contain printable ASCI characters. Max n = 95 
-
-* __-D _n___  Where _n_ is a number in the range 1 to 10. Selects the pool of digit charcters from the ASCI set.  
- * _n_ = 1 files only contain zeros '0' 
- * _n_ > 1 files contain digits. Max n = 10
-
-* -o Output to directory that already exists.
-* -r Random content for fixed file sizes.
-* -b Batch/quiet mode. See examples below for the default interactive mode.
-
-__NOTES : Directory Layout__
+__OPTIONS : Directory Layout__
 
 For the following, _n_ is a number, minimum is 1  
 * -n _n_   Number of files in each directory.  
@@ -56,7 +44,7 @@ Create tree of directories:
 * Depth min is -d 2
 * Width min is -w 1 and manditory  
 
-__NOTES : File Size and Content Options__
+__OPTIONS : File Size and Content__
 
 *Fixed File Size*
  * File sizes have to be designated by B, K, M or G. Minimum is 2B (2 bytes). Example 2KiB = 2K, 3MiB = 3M 4GiB = 4G   
@@ -71,11 +59,22 @@ _Random File Size_
 * -l Largest file size. 
 * If -s is omitted, the random range starts at 2B (2 bytes) if largest file size is <1G or 1M (1MiB) if largest file size is >= 1G
 
-__OPTIONAL__
-* -o Output directory thaty must exist.
-* Defaults to current working directory 
-* Creates a new time stamped directory for content (tfc_YYMMDD_hhmm_ss).
-* -b Batch run with no user check. 
+__OPTIONS: Optional__
+* __-P _n___   Where _n_ is a nuber in the range 1 to 95. Selects the pool of printable characters from the ASCI set. 
+  * _n_ = 1 files only contain the uppercase 'A' 
+  * _n_ = 2 to 26 files only contain lowercase Latin alphabet characters
+  * _n_ >26 files contain printable ASCI characters. Max n = 95 
+
+* __-D _n___  Where _n_ is a number in the range 1 to 10. Selects the pool of digit charcters from the ASCI set.
+  * _n_ = 1 files only contain zeros '0'
+  * _n_ > 1 files contain digits. Max n = 10
+
+* _-o_ Output to directory that already exists.
+* _-r_ Random content for fixed file sizes.
+* _-o_ Output to an _existing_ directory.
+  * Defaults to current working directory
+  * Creates a new time stamped directory for content (tfc_YYMMDD_hhmm_ss).
+* _-b_ Batch/quiet run with no user checks. Default is interactive with user input. 
 
 __LOGGING__
 * None. In batch mode user has to redirect output to a file  
