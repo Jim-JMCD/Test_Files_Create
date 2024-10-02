@@ -16,7 +16,7 @@ __TFileCreate -C__
  
  *User Inputs*: Tree depth, width, number files per directory and file size
  
- *Output*: Smmary, tables of data trees of current and smaller trees. Tables contain data size and file numbers for each tree
+ *Output*: Summary, tables of data trees of current and smaller trees. Tables contain data size and file numbers for each tree
 _______________________________________________________________________
 ## TEST DATA CREATION mode  
 
