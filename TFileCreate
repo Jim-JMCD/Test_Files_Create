@@ -94,6 +94,12 @@ NOTES
 Binary data is generated from /dev/urandom. This data will not compress that well. 
 Binary data that is storeed/transmitted may render data deduplication and compression ineffective.  
 
+Validate file contents
+Number of characters in printable character pool: 
+     sed 's/\(.\)/\1\n/g' <file name> | sort | uniq -c | wc -l 
+Distribtion of printable characters in file:
+     sed 's/\(.\)/\1\n/g' <file name> | sort | uniq -c 
+
 EXAMPLES 
 $(basename $0) -P 28 -d 3 -w 5 -f 15M -n 50
   DIRECTORTY TREE each directory contains 5 directories and 50 files
