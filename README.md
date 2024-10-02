@@ -97,7 +97,6 @@ ___Validate contents: all Files:___
      
 * Where \<bytes\> is the number to check from beginning of file.
 * Non-printable characters will appear as "dots"
-* For sparse files omit \<bytes\> as it not required.
 
 ___Validate printable character distribution:___
    
