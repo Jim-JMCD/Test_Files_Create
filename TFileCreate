@@ -4,7 +4,7 @@
 function Usage(){
 cat << msg_end
 
- A test file generator that puts files in single directory or a directory tree. 
+ A test file generator that creates files in single directory or a directory tree. 
  Includes a calculator for creating data in directory trees. [Option -C]
 
  Minimum file number = 1, Minimum file size = 2 bytes.   
